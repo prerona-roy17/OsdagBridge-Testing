@@ -1,0 +1,9 @@
+﻿TC ID,Date,Span (m),Carriageway (m),Median,Footpath,Skew (deg),Location,Girder / Bracing / Diaphragm,Deck grade,Deck thickness entered (mm),Run time (s),Result,OSI file,Notes
+TC-01,21-11-2026,30,7.5,No,None,0,"Jalpaiguri, West Bengal (IRC 6 2017, wind 47, Zone IV Z=0.24, 40.9/2.2 C)",E 350A,M40,250,77.61,PASS (with 1 mismatch),tc001.osi,"Baseline, all defaults. Ran, 3D CAD appeared, no terminal errors. Input file matches UI except wearing course density (UI 25, file 24.0). Geometry: 4 girders, spacing 2.10, overhang 1.05, overall 8.40, bracing spacing 3.50 (drawing)."
+TC-02,21-11-2026,30,7.5,No,None,0,"Jalpaiguri, West Bengal",E 410A,M45,260,101.33,FAIL (data mismatch),tc002.osi,"Custom materials persisted (fy 410, fu 540, fck 45). Deck thickness entered 260 but file has 250.0. Deck thickness reverted to 250 once during entry, not reproducible in two further attempts. Wearing course density still 24.0."
+TC-03,21-11-2026,40,10,No,None,10,"Jalpaiguri, West Bengal",E 410A,M45,(not re-entered),165.49,FAIL (stale data),tc003.osi,"Span/carriageway/skew and materials did not revert. Overall width 10.9, spacing 2.725, overhang 1.3625 updated. BUT girder segment_table end = 30.0 while span = 40. Deck thickness 250.0 in file."
+TC-04,21-11-2026,19,,,,,,,,,,PASS,,Rejected as out of range (allowed 20 to 45).
+TC-05,21-11-2026,46,,,,,,,,,,PASS,,Rejected as out of range (allowed 20 to 45).
+TC-06,21-11-2026,abc,,,,,,,,,,PASS,,Non-numeric input not accepted.
+TC-07,21-11-2026,(blank),,,,,,,,,,PASS,,Blocked: span is a mandatory field.
+TC-08,21-11-2026,,,,,,,,,,,FAIL,,"Wearing course material Custom, density field. Accepted: 0, 5, 10. Rejected: 11, 15, 20, 22, 24, 25, 26, 30. Concrete default is 25 and cannot be edited."
