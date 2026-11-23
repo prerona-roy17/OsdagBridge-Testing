@@ -36,4 +36,4 @@ Additional findings commented on existing issues:
     python compare_osi.py TC001_baseline.osi TC003.osi
 
 ## Video demonstration
-(add link)
+https://youtu.be/N5hjXs3APUg
